@@ -70,53 +70,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnOne) {
-            pressNumber("1");
-        }
-        if (v.getId() == R.id.btnTwo) {
-            pressNumber("2");
-        }
-        if (v.getId() == R.id.btnThree) {
-            pressNumber("3");
-        }
-        if (v.getId() == R.id.btnFour) {
-            pressNumber("4");
-        }
-        if (v.getId() == R.id.btnFive) {
-            pressNumber("5");
-        }
-        if (v.getId() == R.id.btnSix) {
-            pressNumber("6");
-        }
-        if (v.getId() == R.id.btnSeven) {
-            pressNumber("7");
-        }
-        if (v.getId() == R.id.btnEight) {
-            pressNumber("8");
-        }
-        if (v.getId() == R.id.btnNine) {
-            pressNumber("9");
-        }
-        if (v.getId() == R.id.btnZero) {
-            pressNumber("0");
-        }
+//        if (v.getId() == R.id.btnOne) {
+//            pressNumber("1");
+//        }
+//        if (v.getId() == R.id.btnTwo) {
+//            pressNumber("2");
+//        }
+//        if (v.getId() == R.id.btnThree) {
+//            pressNumber("3");
+//        }
+//        if (v.getId() == R.id.btnFour) {
+//            pressNumber("4");
+//        }
+//        if (v.getId() == R.id.btnFive) {
+//            pressNumber("5");
+//        }
+//        if (v.getId() == R.id.btnSix) {
+//            pressNumber("6");
+//        }
+//        if (v.getId() == R.id.btnSeven) {
+//            pressNumber("7");
+//        }
+//        if (v.getId() == R.id.btnEight) {
+//            pressNumber("8");
+//        }
+//        if (v.getId() == R.id.btnNine) {
+//            pressNumber("9");
+//        }
+//        if (v.getId() == R.id.btnZero) {
+//            pressNumber("0");
+//        }
         if (v.getId() == R.id.btnClear) {
             clear();
         }
-        if (v.getId() == R.id.btnPlus) {
+        else if (v.getId() == R.id.btnPlus) {
             add();
         }
-        if (v.getId() == R.id.btnSubtract) {
+        else if (v.getId() == R.id.btnSubtract) {
             subtract();
         }
-        if (v.getId() == R.id.btnDivide) {
+        else if (v.getId() == R.id.btnDivide) {
             divide();
         }
-        if (v.getId() == R.id.btnMultiply) {
+        else if (v.getId() == R.id.btnMultiply) {
             multiply();
         }
-        if (v.getId() == R.id.btnEqual) {
+        else if (v.getId() == R.id.btnEqual) {
             equal();
+        }
+        else{
+            Button btnSelected = findViewById(v.getId());
+            tvResult.setText(tvResult.getText() + btnSelected.getText().toString());
         }
     }
 
